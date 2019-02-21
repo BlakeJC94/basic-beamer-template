@@ -1,0 +1,50 @@
+\ifx\PROJECTTITLE\undefined
+  % If PROJECTTITLE is not given, 
+  % print DOCTITLE as focus (REQUIRED)
+  \title{\DOCTITLE}
+\else
+  % If PROJECTTITLE is given,
+  % print DOCTITLE (REQUIRED) 
+  % underneath PROJECTTITLE (and PROJECTSUBTITLE)
+  \ifx\PROJECTSUBTITLE\undefined
+    % If PROJECTSUBTITLE is not given, 
+    % print PROJECTTITLE as focus
+    \title{\PROJECTTITLE}
+    \else
+    % If PROJECTSUBTITLE is given,
+    %  print PROJECTTITLE and PROJECTSUBTITLE as focus
+    \title{
+      \PROJECTTITLE \\
+      \PROJECTSUBTITLE
+    } 
+  \fi
+  % print DOCTITLE (REQUIRED) underneath PROJECTTITLE
+  \subtitle{\DOCTITLE}
+\fi
+
+
+\author{\AUTHOR}
+
+\institute{
+  \DEPARTMENT \\ 
+  \INSTITUTION
+}
+
+\if\draft1
+  \draftdate
+\else
+  \monthyeardate
+\fi
+
+\date{\today}
+
+
+% Print titlepage
+\begin{frame}
+	\titlepage
+\end{frame}
+
+% Print contents slide (list sections)
+\begin{frame}{Outline}
+	\tableofcontents[hideothersubsections]
+\end{frame}

@@ -1,0 +1,86 @@
+% ================================================================
+% LaTeX Template, contains guidelines on coding practice and includes extended 
+%   functionality on top of the article class, to be used for reports.
+% 
+% Created from accumulated spaghetti code from my masters assignments from 
+%   2015--2018 and various excerpts from StackExchange and Github, motivated by 
+%   a literature review.
+%
+% Written by Blake Cook on 2019-02-20.
+% Copyright (c) 2019. All rights reserved.
+% 
+% ================================================================
+% SET DOCUMENT FIELDS
+
+% Required fields
+\def\DOCTITLE{Document Title}
+\def\AUTHOR{Author}
+
+% Optional fields (comment out fields that are not needed)
+\def\PROJECTTITLE{Project Title}
+\def\PROJECTSUBTITLE{Project Subtitle}
+\def\DEPARTMENT{Department}
+\def\INSTITUTION{Institution}
+\def\TIMEZONE{GMT}
+
+
+% ================================================================
+% SET DOCUMENT PARAMETERS
+
+% Main
+\documentclass[
+  11pt,            % Default font size
+  aspectratio=43   % Aspect ratio
+]{beamer}
+
+% [USER] Review mode
+%   Toggles timestamp on titlepage and notes appearance
+\def\draft{0}  
+
+
+% ================================================================
+% LOAD PREAMBLE
+\input{src/preamble}
+
+
+% ================================================================
+% WRITE DOCUMENT
+\begin{document}
+
+  % PRINT TITLEPAGE
+  \input{src/titlepage}
+
+
+  % PRINT NOTES IN PREFACE IF DRAFTING
+  \if\draft1
+  
+    % Enable roman page numbering for review notes
+    \pagenumbering{roman}  
+
+    \input{src/notes/some-notes}
+    
+    % Enable arabic page numbering for document
+    \pagenumbering{arabic}  
+    
+  \fi
+
+
+  % WRITE MAIN DOCUMENT MATTER
+
+  \input{src/sections/a-section}
+
+  \input{src/sections/another-section}
+
+
+  % WRITE FORMATTED REFERENCES AND END OF PRESENTATION
+
+  \input{src/references}
+
+  % WRITE BACKUP SLIDES
+
+  \input{src/sections/backup-section}
+
+
+
+
+\end{document}

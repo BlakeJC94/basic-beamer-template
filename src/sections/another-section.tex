@@ -1,0 +1,29 @@
+\section{Another section}
+
+\subsection{Yet another subsection}
+
+\begin{frame}{\insertsubsectionhead}
+
+  Let \( \br{\vc{r}_1, ..., \vc{r}_n} \) be 
+    positions of nodes on cell surface and 
+    let \( \mathcal{N}_i(t) \) denote 
+    the neighbouring nodes of 
+    node \( i \) at time \( t \). 
+
+	\vspace*{12pt}
+  
+  Assume inertial terms are small enough to be 
+    inconsequential compared to
+    dissipative terms 
+    in equation of motion:
+
+	\begin{align*}
+		\eta \ddx{\vc{r}_i}{t} = \vc{B}_i(t)\; + 
+			\sum_{j\in \mathcal{N}_{i}(t)} \vc{F}_{i j}(t),
+  \end{align*}
+  
+  where \( \eta \) is a drag coefficient, 
+    \(\vc{F}_{i j}\) denotes the force on node \(i\) from node \(j\) and 
+    \(\vc{B}_i(t)\) is the sum of other forces on node \(i\) at time \(t\).	
+
+\end{frame}
