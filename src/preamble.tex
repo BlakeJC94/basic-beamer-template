@@ -126,6 +126,17 @@
   }
 \makeatother
 
+% Define \outline environment, only appears if \draft=1
+\newenvironment{outline}{
+  \if\draft1
+    \navbuloff
+    \begin{frame}[plain]
+}{
+    \end{frame}
+    \navbulon
+  \fi
+}
+
 
 % Select beamer theme
 \usetheme{Frankfurt}
