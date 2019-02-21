@@ -1,2 +1,2 @@
-# phd-mid-year-pres
-Presentation for assessors based on phd-mid-year-report and phd-lit-review
+# basic-beamer-template
+Basic beamer template That I use for most of my presentations 
